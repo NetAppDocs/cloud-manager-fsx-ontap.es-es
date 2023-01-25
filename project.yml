@@ -1,0 +1,51 @@
+---
+settings:
+  name: Amazon FSx for ONTAP
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: es-es,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,fr-fr
+sidebar:
+  entries:
+  - title: Documentos de Amazon FSX para ONTAP
+    url: "/index.html"
+  - title: Notas de la versión
+    url: "/whats-new.html"
+  - title: Manos a la obra
+    entries:
+    - title: Obtenga más información sobre FSX para ONTAP
+      url: "/start/concept-fsx-aws.html"
+    - title: Inicio rápido
+      url: "/start/task-getting-started-fsx.html"
+  - title: Requisitos
+    entries:
+    - title: Configure permisos para FSX para ONTAP
+      url: "/requirements/task-setting-up-permissions-fsx.html"
+    - title: Reglas de grupo de seguridad para FSX para ONTAP
+      url: "/requirements/reference-security-groups-fsx.html"
+  - title: Utilice Amazon FSX para ONTAP
+    entries:
+    - title: Crear o detectar un entorno de trabajo
+      url: "/use/task-creating-fsx-working-environment.html"
+    - title: Gestionar un entorno de trabajo
+      url: "/use/task-manage-working-environment.html"
+    - title: Cree y monte volúmenes
+      url: "/use/task-add-fsx-volumes.html"
+    - title: Gestione volúmenes y servicios de datos
+      url: "/use/task-manage-fsx-volumes.html"
+  - title: Conocimiento y apoyo
+    entries:
+    - title: Regístrese para recibir soporte
+      url: "/support/task-support-registration.html"
+    - title: Obtenga ayuda
+      url: "/support/task-get-help.html"
+  - title: Avisos legales
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP
+  repo: cloud-manager-family
+  sidebar_label: Toda la documentación de BlueXP

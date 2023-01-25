@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, cloud manager' 
+summary: Descubra las novedades de Amazon FSX para ONTAP. 
+---
+= Novedades de Amazon FSX para ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Descubra las novedades de Amazon FSX para ONTAP.
+
+
+
+== 01 de enero de 2023
+
+Ahora puede optar por activar link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity["gestión de la capacidad automática"^] para añadir almacenamiento incremental basado en demanda. La administración automática de la capacidad sondea el clúster a intervalos regulares para evaluar la demanda y aumenta automáticamente la capacidad de almacenamiento en incrementos del 10% hasta el 80% de la capacidad máxima del clúster.
+
+
+
+== 18 de septiembre de 2022
+
+Ahora puede hacerlo link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-storage-capacity-and-IOPS["Cambie la capacidad de almacenamiento y las IOPS"^] En cualquier momento después de crear el entorno de trabajo FSX para ONTAP.
+
+
+
+== 31 de julio de 2022
+
+* Si anteriormente ha proporcionado sus credenciales de AWS a Cloud Manager, la nueva función *Mis oportunidades* puede detectar y sugerir automáticamente FSX para los sistemas de archivos ONTAP para agregar y administrar mediante Cloud Manager. También puede revisar los servicios de datos disponibles a través de la ficha *Mis oportunidades*.
++
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system["Descubra FSX para ONTAP usando Mis oportunidades"^]
+
+* Ahora puede hacerlo link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-throughput-capacity["cambie la capacidad de rendimiento"^] En cualquier momento después de crear el entorno de trabajo FSX para ONTAP.
+* Ahora puede hacerlo link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-fsx-volumes.html#replicate-and-sync-data["replicar y sincronizar datos"^] A las instalaciones y otros FSX para sistemas ONTAP que utilizan FSX para ONTAP como origen.
+* Ahora puede hacerlo link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes["Cree volúmenes iSCSI en FSX para ONTAP mediante Cloud Manager"^].
+
+
+
+
+== 3 de julio de 2022
+
+* Ahora puede seleccionar un modelo de puesta en marcha de alta disponibilidad de una o varias zonas de disponibilidad.
++
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment["Crear un entorno de trabajo FSX para ONTAP"^]
+
+* La autenticación de cuenta de AWS GovCloud ahora es compatible con Cloud Manager.
++
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/requirements/task-setting-up-permissions-fsx.html#set-up-the-iam-role["Configure el rol IAM"^]
+
+
+
+
+
+== 27 de febrero de 2022
+
+
+
+=== Asumir el rol de IAM
+
+Cuando crea un entorno de trabajo FSX para ONTAP, ahora debe proporcionar el ARN de la función de IAM que Cloud Manager puede asumir para crear un entorno de trabajo FSX para ONTAP. Anteriormente necesitaba proporcionar claves de acceso a AWS.
+
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Aprenda a configurar permisos para FSX para ONTAP"^].
+
+
+
+== 31 de octubre de 2021
+
+
+
+=== Crear volúmenes iSCSI mediante la API de Cloud Manager
+
+Puede crear volúmenes iSCSI para FSX para ONTAP mediante la API de Cloud Manager y gestionarlos en su entorno de trabajo.
+
+
+
+=== Seleccione unidades de volumen al crear volúmenes
+
+Puede hacerlo link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes["Seleccione unidades de volúmenes (GIB o TIB) al crear volúmenes"^] En FSX para ONTAP.
+
+
+
+== 4 de octubre de 2021
+
+
+
+=== Cree volúmenes CIFS mediante Cloud Manager
+
+Ahora es posible link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes["Cree volúmenes CIFS en FSX para ONTAP mediante Cloud Manager"^].
+
+
+
+=== Editar volúmenes mediante Cloud Manager
+
+Ahora es posible link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-fsx-volumes.html#editing-volumes["Edite FSX para volúmenes de ONTAP mediante Cloud Manager"^].
+
+
+
+== 2 de septiembre de 2021
+
+
+
+=== Compatibilidad con Amazon FSX para ONTAP
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX para ONTAP"^] Es un servicio totalmente gestionado que permite a los clientes lanzar y ejecutar sistemas de archivos con tecnología del sistema operativo de almacenamiento ONTAP de NetApp. FSX para ONTAP proporciona las mismas funciones, rendimiento y funcionalidades administrativas que los clientes de NetApp utilizan en las instalaciones, con la simplicidad, agilidad, seguridad y escalabilidad de un servicio de AWS nativo.
++
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/concept-fsx-aws.html["Obtenga más información sobre Amazon FSX para ONTAP"^].
+
+* Puede configurar un entorno de trabajo FSX para ONTAP en Cloud Manager.
++
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["Cree un entorno de trabajo de Amazon FSX para ONTAP"^].
+
+* Mediante un conector en AWS y Cloud Manager, puede crear y gestionar volúmenes, replicar datos e integrar FSX para ONTAP con servicios de cloud de NetApp, como Data Sense y Cloud Sync.
++
+link:https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-fsx.html["Comience a utilizar Cloud Data Sense para Amazon FSX para ONTAP"^].
+
+

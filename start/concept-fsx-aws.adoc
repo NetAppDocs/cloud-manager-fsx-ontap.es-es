@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: start/concept-fsx-aws.html 
+keywords: amazon fsx for ontap, volumes, aws, access key, secret key, cloud manager 
+summary: Amazon FSX para ONTAP es un servicio completamente gestionado que permite a los clientes lanzar y ejecutar sistemas de archivos con el sistema operativo de almacenamiento ONTAP de NetApp. FSX para ONTAP proporciona las mismas funciones, rendimiento y funcionalidades administrativas que los clientes de NetApp utilizan actualmente en las instalaciones, con la simplicidad, agilidad, seguridad y escalabilidad de un servicio de AWS nativo. 
+---
+= Obtenga más información sobre Amazon FSX para ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX para ONTAP"^] Es un servicio totalmente gestionado que permite a los clientes lanzar y ejecutar sistemas de archivos con tecnología del sistema operativo de almacenamiento ONTAP de NetApp. FSX para ONTAP proporciona las mismas funciones, rendimiento y funcionalidades administrativas que los clientes de NetApp utilizan en las instalaciones, con la simplicidad, agilidad, seguridad y escalabilidad de un servicio de AWS nativo.
+
+
+
+== Funciones
+
+* No es necesario configurar ni gestionar dispositivos de almacenamiento, software o backups.
+* Compatibilidad con los protocolos CIFS, NFSv3, NFSv4.x y SMB v2.0: V3.1.1.
+* Capacidad de almacenamiento de datos prácticamente ilimitada y de bajo coste mediante el uso del nivel de almacenamiento a el que se accede con poca frecuencia (IA).
+* Certificado para ejecutarse en aplicaciones sensibles a la latencia, incluido Oracle RAC.
+* Opción de precios incluidos y de pago por uso.
+
+
+
+
+== Características adicionales en BlueXP
+
+* Uso link:https://docs.netapp.com/us-en/cloud-manager-family/["BlueXP"^] (Anteriormente Cloud Manager) y un conector en AWS, puede crear y gestionar volúmenes, replicar datos e integrar FSX para ONTAP con servicios cloud de NetApp, como Data Sense y Cloud Sync.
+* Mediante la tecnología basada en la inteligencia artificial (IA), Cloud Data Sense puede ayudarle a comprender el contexto de los datos e identificar los datos confidenciales que residen en sus cuentas de FSX para ONTAP. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Leer más"^].
+* Con Cloud Sync de NetApp, puede automatizar la migración de datos a cualquier destino, ya sea en el cloud o en las instalaciones. https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html["Leer más"^]
+
+
+
+
+== Coste
+
+Su cuenta FSX para ONTAP es mantenida por AWS y no por BlueXP. Consulte https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Guía de inicio de Amazon FSX para ONTAP"^].
+
+El uso del conector en AWS tiene un coste adicional y los servicios de datos opcionales, como Cloud Sync y Data Sense.
+
+
+
+== Regiones admitidas
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Consulte las regiones de Amazon admitidas."^]
+
+
+
+== Obtener ayuda
+
+Amazon FSX para ONTAP es una solución de primera parte de AWS. Para las preguntas y los problemas de soporte técnico asociados con su ONTAP sistema de archivos, la infraestructura o cualquier solución que utilice este servicio de Amazon FSX, utilice el Centro de soporte de su consola AWS para abrir un caso de soporte con AWS. Seleccione el servicio "FSX for ONTAP" y la categoría adecuada. Proporcione la información restante necesaria para crear su caso de soporte de AWS.
+
+Para preguntas generales sobre las soluciones y servicios de almacenamiento de BlueXP o BlueXP, puede comenzar con el chat en línea de BlueXP.
+
+Para problemas de soporte técnico específicos de las soluciones y servicios de almacenamiento de BlueXP o BlueXP, puede abrir una incidencia de soporte de NetApp con el número de serie de su cuenta de BlueXP. Tendrá que hacerlo link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/support/task-support-registration.html["Registre su cuenta de BlueXP"^] para activar el soporte.

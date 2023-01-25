@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: requirements/task-setting-up-permissions-fsx.html 
+keywords: fsx for ontap, iam, user role, permissions, aws govcloud, govcloud, credentials 
+summary: Para crear o gestionar el entorno de trabajo de Amazon FSX para ONTAP, debe tener una clave de acceso de AWS y una clave secreta para un rol de usuario de IAM con permisos FSX para ONTAP. 
+---
+= Configure permisos para FSX para ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para crear o gestionar un entorno de trabajo de Amazon FSX para ONTAP, debe agregar credenciales de AWS a BlueXP proporcionando la ARN de una función IAM que proporciona a BlueXP los permisos necesarios para crear un entorno de trabajo FSX para ONTAP.
+
+
+
+== Configure el rol IAM
+
+Configure una función de IAM que permita a BlueXP asumir la función.
+
+.Pasos
+. Vaya a la consola IAM de la cuenta de destino.
+. En Access Management, haga clic en *roles > Crear función* y siga los pasos para crear la función.
++
+** En *Tipo de entidad de confianza*, seleccione *cuenta de AWS*.
+** Seleccione *otra cuenta de AWS* e introduzca el ID de BlueXP.
++
+*** Para BlueXP SaaS: 952013314444
+*** Para AWS GovCloud (EE. UU.): 033442085313
+
+
+** Cree una directiva que incluya los siguientes permisos:
++
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "fsx:*",
+                "ec2:Describe*",
+                "ec2:CreateTags",
+                "iam:CreateServiceLinkedRole",
+                "kms:Describe*",
+                "kms:List*",
+                "kms:CreateGrant",
+                "cloudwatch:GetMetricData",
+                "cloudwatch:GetMetricStatistics"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+----
++
+
+NOTE: `"cloudwatch:GetMetricData"` y.. `"cloudwatch:GetMetricStatistics"` se requieren para habilitar link:../use/task-manage-working-environment.html["gestión de la capacidad automática"].
+
+
+
+. Copie el rol ARN de la función IAM para que pueda pegarlo en BlueXP en el siguiente paso.
+
+
+.Resultado
+El rol IAM ahora tiene los permisos necesarios.
+
+
+
+== Añada las credenciales
+
+Después de proporcionar la función IAM con los permisos necesarios, agregue el rol ARN a BlueXP.
+
+.Antes de empezar
+Si acaba de crear la función IAM, puede tardar unos minutos en estar disponible. Espere unos minutos antes de agregar las credenciales a BlueXP.
+
+.Pasos
+. En la parte superior derecha de la consola de BlueXP, haga clic en el icono Configuración y seleccione *credenciales*.
++
+image:screenshot_settings_icon.gif["Captura de pantalla que muestra el icono Configuración en la parte superior derecha de la consola BlueXP."]
+
+. Haga clic en *Agregar credenciales* y siga los pasos del asistente.
++
+.. *Ubicación de credenciales*: Seleccione *Servicios Web de Amazon > BlueXP*.
+.. *Definir credenciales*: Proporcionar el ARN (nombre de recurso de Amazon) de la función IAM.
++
+[NOTE]
+====
+*** Si utiliza una cuenta de AWS GovCloud (EE. UU.), marque *utilizo una cuenta de AWS GovCloud (EE. UU.)*.
++
+image:screenshot-govcloud-checkbox.png["Una captura de pantalla de la casilla de verificación de la cuenta GovCloud (EE. UU.)."]
+
+*** La autenticación mediante AWS GovCloud deshabilitará la plataforma SaaS. Este es un cambio permanente en tu cuenta y no se puede deshacer.
+
+
+====
+.. *Revisión*: Confirme los detalles acerca de las nuevas credenciales y haga clic en *Agregar*.
+
+
+
+
+.Resultado
+Ahora puede utilizar las credenciales al crear un entorno de trabajo FSX para ONTAP.
+
+
+
+== Enlaces relacionados
+
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-aws.html["Credenciales y permisos de AWS"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html["Gestión de credenciales de AWS para BlueXP"^]
+

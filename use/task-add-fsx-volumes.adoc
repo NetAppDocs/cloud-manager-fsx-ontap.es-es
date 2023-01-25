@@ -1,0 +1,158 @@
+---
+sidebar: sidebar 
+permalink: use/task-add-fsx-volumes.html 
+keywords: fsx for ontap, fsx, aws, create volumes, create nfs volumes, delete nfs volumes, cifs volumes, iscsi, mount volume, delete working environment 
+summary: Tras configurar su entorno de trabajo, puede crear y gestionar Amazon FSX para volúmenes de ONTAP, clones y copias Snapshot, cambiar las políticas de organización en niveles y eliminar o eliminar FSX para ONTAP. 
+---
+= Cree volúmenes para Amazon FSX para ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de configurar el entorno de trabajo, puede crear y montar FSX para los volúmenes de ONTAP.
+
+
+
+== Cree volúmenes
+
+Puede crear y gestionar volúmenes NFS, CIFS e iSCSI desde su entorno de trabajo FSX para ONTAP en BlueXP. Los volúmenes creados con la CLI de ONTAP también serán visibles en el entorno de trabajo FSX para ONTAP.
+
+.Antes de empezar
+Necesita:
+
+* Un activo https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["Conector en AWS"^].
+* Si desea utilizar SMB, debe haber configurado DNS y Active Directory. Para obtener más información sobre la configuración de red DNS y Active Directory, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html["AWS: Requisitos previos para usar un Microsoft AD autogestionado"^].
+
+
+.Pasos
+. Abra el FSX para el entorno de trabajo de ONTAP.
+. Si no tiene un conector activado, se le pedirá que agregue uno.
++
+image:screenshot_fsx_connector_prompt.png["Una captura de pantalla de la solicitud del conector FSX para ONTAP."]
+
+. Haga clic en la ficha *Volumes*
+. Haga clic en *Añadir volumen*.
++
+image:screenshot_fsx_volume_new.png["Captura de pantalla de la ficha volumen FSX para ONTAP."]
+
+. *Detalles del volumen y Protección*:
++
+.. Escriba un nombre para el volumen nuevo.
+.. Los campos de máquina virtual de almacenamiento (SVM) rellena automáticamente la SVM en función del nombre del entorno de trabajo.
+.. Introduzca el tamaño del volumen y seleccione una unidad (GIB o TIB). Tenga en cuenta que el tamaño del volumen crecerá con el uso.
+.. Seleccione una política de Snapshot. De forma predeterminada, se realiza una copia de Snapshot cada hora (manteniendo las últimas seis copias), cada día (manteniendo las dos últimas copias) y cada semana (manteniendo las dos últimas copias).
+.. Haga clic en *Siguiente*.
++
+image:screenshot_fsx_volume_details.png["Una captura de pantalla de los campos de protección y detalles del volumen para FSX para la creación de volúmenes de ONTAP."]
+
+
+
+. *Protocolo*: Seleccione un protocolo de volumen NFS, CIFS o iSCSI.
++
+.. Para NFS:
++
+*** Seleccione una política de control de acceso.
+*** Seleccione las versiones de NFS.
+*** Seleccione una política de exportación personalizada. Haga clic en el icono de información para conocer criterios de valor válidos.
++
+image:screenshot_fsx_volume_protocol_nfs.png["Una captura de pantalla de la configuración de NFS FSX para la creación del volumen ONTAP."]
+
+
+
+.. Para CIFS:
++
+*** Introduzca un nombre para compartir.
+*** Introduzca usuarios o grupos separados por punto y coma.
+*** Seleccione el nivel de permiso del volumen.
++
+image:screenshot_fsx_volume_protocol_cifs.png["Una captura de pantalla de la configuración de NFS FSX para la creación del volumen ONTAP."]
+
++
+
+TIP: Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que configure la conectividad CIFS mediante una configuración _Active Directory_ o _Workgroup_.
+
+*** Si selecciona una configuración de Active Directory, tendrá que proporcionar la siguiente información de configuración.
++
+[cols="25,75"]
+|===
+| Campo | Descripción 
+
+
+| Dirección IP primaria DNS | Las direcciones IP de los servidores DNS que proporcionan resolución de nombres para el servidor CIFS. El servidor DNS indicado debe contener los registros de ubicación de servicio (SRV) necesarios para localizar los servidores LDAP de Active Directory y los controladores de dominio del dominio al que se unirá el servidor CIFS. 
+
+
+| Dominio de Active Directory al que unirse | El FQDN del dominio de Active Directory (AD) al que desea que se una el servidor CIFS. 
+
+
+| Credenciales autorizadas para unirse al dominio | Nombre y contraseña de una cuenta de Windows con privilegios suficientes para agregar equipos a la unidad organizativa (OU) especificada dentro del dominio AD. 
+
+
+| Nombre NetBIOS del servidor CIFS | Nombre de servidor CIFS que es único en el dominio de AD. 
+
+
+| Unidad organizacional | La unidad organizativa del dominio AD para asociarla con el servidor CIFS. El valor predeterminado es CN=Computers. 
+
+
+| Dominio DNS | El dominio DNS de la máquina virtual de almacenamiento (SVM). En la mayoría de los casos, el dominio es el mismo que el dominio de AD. 
+
+
+| Servidor NTP | Seleccione *Activar la configuración del servidor NTP* para configurar un servidor NTP mediante el DNS de Active Directory. Si necesita configurar un servidor NTP con una dirección diferente, debe usar la API. Consulte https://docs.netapp.com/us-en/cloud-manager-automation/index.html["Documentos de automatización de BlueXP"^] para obtener más detalles. 
+|===
+*** Si selecciona una configuración de grupo de trabajo, introduzca el servidor y el nombre del grupo de trabajo para un grupo de trabajo configurado para CIFS.
+
+
+.. Para iSCSI: Puede conectar el LUN con un iGroup existente o crear uno nuevo. Para asignar un iGroup existente, seleccione su sistema operativo y uno o más iGroups.
++
+Para crear un nuevo iGroup:
+
++
+... Seleccione **Crear nuevo**.
+... Seleccione el sistema operativo.
+... Haga clic en para añadir uno o varios nombres completos de iSCSI (IQN) del host. Puede seleccionar IQN existentes o agregar nuevos IQN. Para obtener más detalles sobre cómo encontrar el IQN de un volumen, consulte link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-connect-lun.html["Conectar un host a un LUN"^].
+... Introduzca un **Nombre de iGroup**.
++
+image:screenshot-volume-protocol-iscsi.png["Una captura de pantalla de la configuración de iSCSI FSX para la creación de volúmenes ONTAP."]
+
+
+
+.. Haga clic en *Siguiente*.
+
+
+. *Perfil de uso y clasificación*:
++
+.. De forma predeterminada, *la eficiencia del almacenamiento* está desactivada. Puede cambiar esta configuración para habilitar la deduplicación y la compresión.
+.. De forma predeterminada, *la directiva de segmentación* se establece en *sólo instantánea*. Puede seleccionar una política de organización en niveles diferente en función de sus necesidades.
+.. Haga clic en *Siguiente*.
++
+image:screenshot_fsx_volume_usage_tiering.png["Una captura de pantalla del perfil de uso y la configuración de niveles para FSX para la creación de volúmenes de ONTAP."]
+
+
+
+. *Revisión*: Revise su configuración de volumen. Haga clic en *anterior* para cambiar la configuración o haga clic en *Agregar* para crear el volumen.
+
+
+.Resultado
+El nuevo volumen se agrega al entorno de trabajo.
+
+
+
+== Monte los volúmenes
+
+Acceda a las instrucciones de montaje desde BlueXP para que pueda montar el volumen en un host.
+
+.Pasos
+. Abra el entorno de trabajo.
+. Seleccione la ficha *volumen* y *Administrar volumen* para abrir el menú *acciones de volumen*.
++
+image:screenshot_fsx_volume_actions.png["Una captura de pantalla de cómo abrir el menú Volume Actions (acciones de volumen)."]
+
+. Seleccione *Mount command* y siga las instrucciones para montar el volumen.
+
+
+.Resultado
+El volumen ahora está montado en el host.

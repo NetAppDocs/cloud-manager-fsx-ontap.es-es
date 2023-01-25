@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: use/task-manage-working-environment.html 
+keywords: amazon fsx for ontap, fsx, manage working environment, delete working environment, remove working environment, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity 
+summary: BlueXP le permite gestionar su entorno de trabajo FSX para ONTAP. Es posible habilitar la gestión automática de la capacidad, modificar el rendimiento y la capacidad de almacenamiento, e IOPS, y eliminar o eliminar el entorno de trabajo. 
+---
+= Gestione un entorno de trabajo de Amazon FSX para ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+BlueXP le permite gestionar su entorno de trabajo FSX para ONTAP. Es posible habilitar la gestión automática de la capacidad, modificar el rendimiento y la capacidad de almacenamiento, e IOPS, y eliminar o eliminar el entorno de trabajo.
+
+
+
+== Gestione la capacidad automática
+
+Puede optar por habilitar una gestión automática de la capacidad para añadir almacenamiento incremental según demanda. La gestión automática de la capacidad sondea el clúster a intervalos regulares para evaluar la demanda y aumenta automáticamente la capacidad de almacenamiento en incrementos de un 10 % hasta un 80 % de la capacidad máxima del clúster.
+
+
+NOTE: Si no especificó manualmente un valor de IOPS al crear el entorno de trabajo, BlueXP aumentará las IOPS en 3 IOPS por GIB de la nueva capacidad total. Si ha especificado un valor de IOPS, BlueXP no ajustará las IOPS. Para obtener más información sobre la configuración de IOPS, consulte link:task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment["crear un entorno de trabajo"].
+
+La gestión automática de la capacidad está deshabilitada de manera predeterminada. Es posible gestionar la capacidad automática con o sin un conector activo en AWS.
+
+
+
+=== Gestione la capacidad automática sin un conector activo
+
+Es posible gestionar la capacidad automática sin un conector activo en AWS.
+
+.Pasos
+. Abra el FSX para el entorno de trabajo de ONTAP.
+. Seleccione el icono de menú (image:icon-three-dots.png["Imagen del icono de menú de tres puntos."]) Y seleccione *gestionar capacidad automática*.
++
+image:screenshot-auto-capacity-no-connector.png["Captura de pantalla del menú gestionar capacidad automática."]
+
+. En la página *Gestión automática de la capacidad*:
++
+** Seleccione la casilla para habilitar la gestión automática de la capacidad.
+** Anule la selección de la casilla para deshabilitar la gestión automática de la capacidad si se habilitó anteriormente.
+
+
+. Seleccione *aplicar*.
+
+
+
+
+=== Gestione la capacidad automática con un conector activo
+
+Es posible gestionar la capacidad automática con un conector activo en AWS.
+
+.Pasos
+. Abra el FSX para el entorno de trabajo de ONTAP.
+. En la ficha *Descripción general*, seleccione *Características*.
+. Seleccione el icono del lápiz (image:icon-pencil.png["Imagen del icono de edición de lápiz."]) Para abrir la página *Gestión automática de la capacidad*.
+. En la página *Gestión automática de la capacidad*:
++
+** Seleccione la casilla para habilitar la gestión automática de la capacidad.
+** Anule la selección de la casilla para deshabilitar la gestión automática de la capacidad si se habilitó anteriormente.
+
+
+. Seleccione *aplicar*.
+
+
+
+
+== Cambie la capacidad de rendimiento
+
+Puede cambiar la capacidad de rendimiento en cualquier momento después de crear el FSX para el entorno de trabajo de ONTAP.
+
+.Antes de empezar
+Necesita un activo https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["Conector en AWS"^].
+
+.Pasos
+. Abra el FSX para el entorno de trabajo de ONTAP.
+. En la ficha *Descripción general*, seleccione *Características*.
+. Seleccione el icono del lápiz (image:icon-pencil.png["Imagen del icono de edición de lápiz."]) Para abrir la página de edición *capacidad de procesamiento*.
++
+image:screenshot-change-thruput.png["Una captura de pantalla de la ubicación del menú de capacidad de cambio de rendimiento."]
+
+. Seleccione una nueva capacidad de rendimiento en el menú desplegable y seleccione *Actualizar*. Este cambio puede tardar hasta 25 minutos en surtir efecto y no interrumpe el acceso a los datos.
+
+
+
+
+== Cambie la capacidad de almacenamiento y las IOPS
+
+Puede cambiar la capacidad de almacenamiento y las IOPS en cualquier momento después de crear el FSX para el entorno de trabajo ONTAP.
+
+.Antes de empezar
+Necesita un activo https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["Conector en AWS"^].
+
+.Pasos
+. Abra el FSX para el entorno de trabajo de ONTAP.
+. En la ficha *Descripción general*, seleccione *Características*.
+. Seleccione el icono del lápiz (image:icon-pencil.png["Imagen del icono de edición de lápiz."]) Para abrir la página de edición *capacidad de almacenamiento e IOPS*.
++
+image:screenshot-change-iops.png["Una captura de pantalla de la ubicación del menú Cambiar capacidad de almacenamiento e IOPS."]
+
+. Puede cambiar la capacidad de almacenamiento y la tasa de IOPS una vez cada seis horas. Si intenta realizar cambios con mayor frecuencia, recibirá un error.
++
+image:screenshot-configure-iops.png["Captura de pantalla de la página para cambiar la capacidad de almacenamiento y los valores de IOPS."]
+
++
+[NOTE]
+====
+** El aprovechamiento máximo de la capacidad de almacenamiento recomendado es del 80 % para mantener el rendimiento de la segmentación de datos y permitir la capacidad para datos adicionales.
+** Si selecciona *Automatic* IOPS, mantiene una relación de tres IOPS de SSD aprovisionadas por GIB de almacenamiento primario hasta 80,000. No puede aprovisionar manualmente un valor de IOPS de 80,000 o superior.
+
+
+====
+. Marque la casilla de comprobación para confirmar que comprende cómo el cambio de la capacidad de almacenamiento afecta el coste del FSX para el servicio ONTAP y que no es posible realizar cambios adicionales durante seis horas.
+. Seleccione *Actualizar* para confirmar los cambios.
+
+
+
+
+== Elimine FSX para ONTAP del espacio de trabajo
+
+Puede eliminar FSX para ONTAP de BlueXP sin eliminar su cuenta o volúmenes de FSX para ONTAP. Puede volver a agregar el entorno de trabajo de FSX para ONTAP a BlueXP en cualquier momento.
+
+.Pasos
+. Abra el entorno de trabajo. Si no tiene un conector en AWS, verá la pantalla de solicitud. Puede ignorar esto y continuar con la eliminación del entorno de trabajo.
+. En la parte superior derecha de la página, seleccione el menú acciones y seleccione *Quitar del área de trabajo*.
++
+image:screenshot_fsx_working_environment_remove.png["Una captura de pantalla de la opción Remove para FSX para ONTAP de la interfaz BlueXP."]
+
+. Seleccione *Quitar* para eliminar FSX para ONTAP de BlueXP.
+
+
+
+
+== Elimine el entorno de trabajo FSX para ONTAP
+
+Puede eliminar el FSX para ONTAP de BlueXP.
+
+.Antes de empezar
+* Debe link:task-manage-fsx-volumes.html#delete-volumes["elimine todos los volúmenes"] asociado con el sistema de archivos.
+
+
+
+NOTE: Necesitará un conector activo en AWS para quitar o eliminar volúmenes.
+
+* No se puede eliminar un entorno de trabajo que contenga volúmenes con errores. Los volúmenes con fallos deben eliminarse mediante la consola de gestión de AWS o la interfaz de línea de comandos antes de eliminar FSX para el sistema de archivos ONTAP.
+
+
+
+WARNING: Esta acción eliminará todos los recursos asociados con el entorno de trabajo. Esta acción no se puede deshacer.
+
+.Pasos
+. Abra el entorno de trabajo. Si no tiene un conector en AWS, verá la pantalla de solicitud. Puede ignorar esto y continuar con la eliminación del entorno de trabajo.
+. En la parte superior derecha de la página, seleccione el menú acciones y seleccione *Eliminar*.
++
+image:screenshot_fsx_working_environment_delete.png["Una captura de pantalla de la opción DELETE para FSX para ONTAP desde la interfaz de BlueXP."]
+
+. Introduzca el nombre del entorno de trabajo y seleccione *Eliminar*.
+

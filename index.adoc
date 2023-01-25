@@ -1,0 +1,15 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+summary: Amazon FSX para ONTAP de NetApp aporta todas las funcionalidades de ONTAP a un servicio gestionado nativo de AWS que ofrece una experiencia de cloud híbrido coherente. Esta documentación describe cómo gestionar FSX para ONTAP con NetApp BlueXP. 
+---
+= Documentación de Amazon FSX para ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

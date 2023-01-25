@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: use/task-manage-fsx-volumes.html 
+keywords: fsx for ontap, fsx, aws, delete volumes, delete nfs volumes, delete cifs volumes, tiering policy, mount path, get mount path, mount volume, delete volumes, snapshots, edit volume, clone volume, clone 
+summary: Puede gestionar volúmenes, clones y copias Snapshot, y cambiar las políticas de organización en niveles de FSX para ONTAP con BlueXP. 
+---
+= Gestione volúmenes para Amazon FSX para ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver y gestionar volúmenes, clones y copias Snapshot, y cambiar las políticas de organización en niveles de FSX para ONTAP con BlueXP.
+
+
+
+== Ver los detalles del volumen
+
+Después de crear un volumen, puede ver sus detalles de configuración.
+
+. Abra el entorno de trabajo.
++
+
+NOTE: Puede pasar el ratón sobre el nombre del volumen para ver el tipo de volumen.
+
+. Abra la ficha volumen y seleccione *gestionar volumen* para abrir el menú *acciones de volumen*.
+. Seleccione *Ver detalles del volumen*.
+
+
+
+
+== Editar volúmenes
+
+Después de crear un volumen, es posible modificarlo en cualquier momento.
+
+.Pasos
+. Abra el entorno de trabajo.
+. Abra la ficha volumen y seleccione *gestionar volumen* para abrir el menú *acciones de volumen*.
+. Seleccione *Editar configuración de volumen*.
++
+.. Para NFS, puede modificar el tamaño y las etiquetas.
+.. Para CIFS, puede modificar el nombre del recurso compartido, los usuarios, los permisos y la política de Snapshot según sea necesario.
+
+
+. Seleccione *aplicar*.
+
+
+
+
+== Clonar volúmenes
+
+Después de crear un volumen, es posible crear un nuevo volumen de lectura y escritura a partir de una nueva snapshot.
+
+.Pasos
+. Abra el entorno de trabajo.
+. Abra la ficha volumen y seleccione *gestionar volumen* para abrir el menú *acciones de volumen*.
+. Seleccione *Clonar el volumen*.
+. Introduzca un nombre para el volumen clonado.
+. Seleccione *Clonar*.
+
+
+
+
+== Gestione copias Snapshot
+
+Las copias Snapshot proporcionan una copia puntual de su volumen. Cree copias de Snapshot y restaure los datos en un nuevo volumen.
+
+.Pasos
+. Abra el entorno de trabajo.
+. Abra la ficha volumen y seleccione *gestionar volumen* para abrir el menú *acciones de protección*.
+. Seleccione una de las opciones disponibles para gestionar las copias Snapshot:
++
+** *Crear una copia Snapshot*
+** *Restaurar desde una copia Snapshot*
+
+
+. Siga las indicaciones para completar la acción seleccionada.
+
+
+
+
+== Cambie la política de organización en niveles
+
+Cambie la política de organización en niveles del volumen.
+
+.Pasos
+. Abra el entorno de trabajo.
+. Abra la ficha volumen y seleccione *gestionar volumen* para abrir el menú *acciones avanzadas*.
+. Seleccione *Cambiar política de organización en niveles*.
+. Seleccione una nueva política de organización en niveles de volúmenes y haga clic en *Cambiar*.
+
+
+
+
+== Replicar y sincronizar datos
+
+Puede replicar datos entre entornos de almacenamiento con BlueXP. Para configurar FSX para la replicación de ONTAP, consulte https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["replicación de datos entre sistemas"^].
+
+Puede crear relaciones de sincronización con Cloud Sync en BlueXP. Para configurar las relaciones de sincronización, consulte https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html["creación de relaciones de sincronización"^].
+
+
+
+== Elimine volúmenes
+
+Elimine los volúmenes que ya no necesita.
+
+.Antes de empezar
+No puede eliminar un volumen que anteriormente formaba parte de una relación de SnapMirror con BlueXP. Los volúmenes de SnapMirror deben eliminarse con la consola de gestión de AWS o la interfaz de línea de comandos.
+
+.Pasos
+. Abra el entorno de trabajo.
+. Abra la ficha volumen y seleccione *gestionar volumen* para abrir el menú *acciones de volumen*.
+. Seleccione *Eliminar el volumen*.
+. Introduzca el nombre del entorno de trabajo y confirme que desea eliminar el volumen. Puede tomar hasta una hora antes de que el volumen se quite completamente de BlueXP.
+
+
+
+NOTE: Si intenta eliminar un volumen clonado, se muestra un error.
