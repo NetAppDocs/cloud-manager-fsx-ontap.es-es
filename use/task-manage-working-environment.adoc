@@ -34,8 +34,8 @@ La gestión automática de la capacidad está deshabilitada de manera predetermi
 Es posible gestionar la capacidad automática sin un conector activo en AWS.
 
 .Pasos
-. Abra el FSX para el entorno de trabajo de ONTAP.
-. Seleccione el icono de menú (image:icon-three-dots.png["Imagen del icono de menú de tres puntos."]) Y seleccione *gestionar capacidad automática*.
+. Seleccione el entorno de trabajo FSX para ONTAP en el lienzo.
+. En el panel *Detalles*, utilice el icono de tres puntos (image:icon-three-dots.png["icono de tres puntos"]) para abrir el menú de opciones. Haga clic en *gestionar capacidad automática*.
 +
 image:screenshot-auto-capacity-no-connector.png["Captura de pantalla del menú gestionar capacidad automática."]
 
@@ -139,18 +139,19 @@ image:screenshot_fsx_working_environment_remove.png["Una captura de pantalla de 
 
 Puede eliminar el FSX para ONTAP de BlueXP.
 
-.Antes de empezar
-* Debe link:task-manage-fsx-volumes.html#delete-volumes["elimine todos los volúmenes"] asociado con el sistema de archivos.
-
-
-
-NOTE: Necesitará un conector activo en AWS para quitar o eliminar volúmenes.
-
-* No se puede eliminar un entorno de trabajo que contenga volúmenes con errores. Los volúmenes con fallos deben eliminarse mediante la consola de gestión de AWS o la interfaz de línea de comandos antes de eliminar FSX para el sistema de archivos ONTAP.
-
-
 
 WARNING: Esta acción eliminará todos los recursos asociados con el entorno de trabajo. Esta acción no se puede deshacer.
+
+.Antes de empezar
+Antes de eliminar el entorno de trabajo, debe:
+
+* Rompa todas las relaciones de replicación con este entorno de trabajo.
+* link:task-manage-fsx-volumes.html#delete-volumes["Elimine todos los volúmenes"] asociado con el sistema de archivos. Necesitará un conector activo en AWS para quitar o eliminar volúmenes.
++
+
+NOTE: Los volúmenes con errores deben eliminarse mediante la consola de gestión de AWS o la interfaz de línea de comandos.
+
+
 
 .Pasos
 . Abra el entorno de trabajo. Si no tiene un conector en AWS, verá la pantalla de solicitud. Puede ignorar esto y continuar con la eliminación del entorno de trabajo.

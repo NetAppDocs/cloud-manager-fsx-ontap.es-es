@@ -23,7 +23,7 @@ indexpage:
     links:
     - title: Crear o detectar un entorno de trabajo
       url: "/use/task-creating-fsx-working-environment.html"
-    - title: Administrar la entorno de trabajo
+    - title: Gestionar el entorno de trabajo
       url: "/use/task-manage-working-environment.html"
     - title: Cree y monte volúmenes
       url: "/use/task-add-fsx-volumes.html"

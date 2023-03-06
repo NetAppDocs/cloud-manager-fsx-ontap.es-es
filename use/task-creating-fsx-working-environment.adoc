@@ -22,7 +22,7 @@ Con BlueXP puede crear o descubrir un entorno de trabajo FSX para ONTAP para agr
 
 El primer paso es crear un entorno de trabajo FSX para ONTAP. Si ya ha creado un FSX para el sistema de archivos ONTAP en la consola de gestión de AWS, puede link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system["Descúbralo mediante BlueXP"].
 
-.Antes de empezar
+.Lo que necesitará
 Antes de crear su entorno de trabajo FSX para ONTAP en BlueXP, necesitará:
 
 * El ARN de una función IAM que proporciona a BlueXP los permisos necesarios para crear un entorno de trabajo FSX para ONTAP. Consulte link:../requirements/task-setting-up-permissions-fsx.html["Adición de credenciales de AWS a BlueXP"] para obtener más detalles.
@@ -30,107 +30,79 @@ Antes de crear su entorno de trabajo FSX para ONTAP en BlueXP, necesitará:
 
 
 .Pasos
-. En BlueXP, agregue un nuevo entorno de trabajo, seleccione la ubicación *Amazon Web Services* y haga clic en *Siguiente*.
-. Seleccione *Amazon FSX para ONTAP* y haga clic en *Siguiente*.
+. En BlueXP, agregue un nuevo entorno de trabajo, seleccione *Servicios Web de Amazon* y haga clic en *Añadir nuevo* para Amazon FSX para ONTAP.
 +
 image:screenshot_add_fsx_working_env.png["Captura de pantalla de la adición de un entorno de trabajo para Amazon FSX para ONTAP"]
 
-. Autenticar FSX para ONTAP en BlueXP.
+. *FSX para la autenticación ONTAP*
 +
 .. Si ya tiene una función IAM en su cuenta con los permisos de AWS correctos para FSX para ONTAP, selecciónela en el menú desplegable.
-+
-image:screenshot-fsx-assume-role-present.png["Captura de pantalla que muestra la lista desplegable de funciones de AWS"]
-
-.. Si no tiene ningún rol de IAM en su cuenta, haga clic en *Página de credenciales* y siga los pasos del asistente para agregar un ARN para un rol de AWS IAM con credenciales de FSX para ONTAP. Consulte link:../requirements/task-setting-up-permissions-fsx.html["Adición de credenciales de AWS a BlueXP"] para obtener más detalles.
-+
-image:screenshot-fsx-assume-role-not-present.png["Una captura de pantalla de los pasos para añadir el ARN para una función de IAM de AWS con permiso FSX para ONTAP."]
+.. Si no tiene ningún rol de IAM en su cuenta, haga clic en *credenciales* y siga los pasos del asistente para agregar un ARN para un rol de AWS IAM con credenciales de FSX para ONTAP. Consulte link:../requirements/task-setting-up-permissions-fsx.html["Adición de credenciales de AWS a BlueXP"] para obtener más detalles.
 
 
-
-. Proporcione información acerca de la instancia del FSX para ONTAP:
+. *Detalles y credenciales*
 +
 .. Introduzca el nombre del entorno de trabajo que desee utilizar.
 .. De forma opcional, puede crear etiquetas haciendo clic en el signo más e introduciendo un nombre y un valor de etiqueta.
 .. Introduzca y confirme la contraseña del clúster de ONTAP que desea utilizar.
-.. Seleccione la opción para usar la misma contraseña para el usuario de SVM o establecer una contraseña diferente.
-.. Haga clic en *Siguiente*.
+.. De manera opcional, anule la selección de la opción para usar la misma contraseña para el usuario de SVM y establecer una contraseña diferente.
+
+
+. *Región y VPC*
 +
-image:screenshot_add_fsx_credentials.png["Captura de pantalla de agregar credenciales para FSX para ONTAP"]
-
-
-
-. Proporcionar información de región y VPC:
+.. Seleccione un modelo de despliegue de alta disponibilidad *Zona de disponibilidad única* o *zonas de disponibilidad múltiple*. En el caso de varias zonas de disponibilidad, seleccione subredes en al menos dos zonas de disponibilidad, de manera que cada nodo esté en una zona de disponibilidad dedicada.
 +
-.. Seleccione un modelo de despliegue de alta disponibilidad *Zona de disponibilidad única* o *zonas de disponibilidad múltiple*.
-+
-image:screenshot-ha-deployment-models.png["Una captura de pantalla de los botones de opción de selección para modelos de despliegue de una o varias zonas de disponibilidad."]
-
-.. Seleccione una región y VPC.
-+
-[NOTE]
-====
-En el caso de varias zonas de disponibilidad, seleccione subredes en al menos dos zonas de disponibilidad, de manera que cada nodo esté en una zona de disponibilidad dedicada.
-
 image:screenshot_add_fsx_region.png["Una captura de pantalla de cómo agregar una región y VPC para FSX para ONTAP"]
 
-====
 .. Acepte el grupo de seguridad predeterminado o seleccione uno diferente. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html["Grupos de seguridad de AWS"^] controlar el tráfico entrante y saliente. Los configura el administrador de AWS y están asociados con su link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["Interfaz de red elástica de AWS (ENI)"^].
-.. Haga clic en *Siguiente*.
 
 
-. Deje _CIDR Range_ vacío y haga clic en *Siguiente* para configurar automáticamente un rango disponible. Opcionalmente, puede utilizar https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html["Puerta de enlace de tránsito de AWS"^] para configurar manualmente un rango.
+. *IP flotante* (sólo zonas de disponibilidad múltiple)
 +
-image:screenshot_add_fsx_floatingIP.png["Una captura de pantalla de cómo agregar una región y VPC para FSX para ONTAP"]
+Deje _CIDR Range_ vacío para establecer automáticamente un rango disponible. Opcionalmente, puede utilizar https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html["Puerta de enlace de tránsito de AWS"^] para configurar manualmente un rango.
 
-. Seleccione tablas de rutas que incluyan rutas a las direcciones IP flotantes. Si sólo tiene una tabla de rutas para las subredes en el VPC (la tabla de rutas principal), BlueXP agrega automáticamente las direcciones IP flotantes a esa tabla de rutas. Haga clic en *Siguiente* para continuar.
+. * Tablas de rutas* (sólo zonas de disponibilidad múltiple)
 +
-image:screenshot_add_fsx_route_table.png["Captura de pantalla de selección de una tabla de ruta para FSX para ONTAP"]
+Seleccione tablas de rutas que incluyan rutas a las direcciones IP flotantes. Si sólo tiene una tabla de rutas para las subredes en el VPC (la tabla de rutas principal), BlueXP agrega automáticamente las direcciones IP flotantes a esa tabla de rutas.
 
-. Acepte la clave maestra predeterminada de AWS o haga clic en *Cambiar clave* para seleccionar una clave maestra de cliente de AWS (CMK) diferente. Para obtener más información sobre CMK, consulte https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/https://docs.netapp.com/us-en/occm/task-setting-up-kms.html["Configuración de AWS KMS"^]. Haga clic en *Siguiente* para continuar.
+. *Cifrado de datos*
 +
-image:screenshot_add_fsx_encryption.png["Captura de pantalla de configuración de la clave maestra predeterminada para FSX para ONTAP"]
+Acepte la clave maestra predeterminada de AWS o haga clic en *Cambiar clave* para seleccionar una clave maestra de cliente de AWS (CMK) diferente. Para obtener más información sobre CMK, consulte https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/https://docs.netapp.com/us-en/occm/task-setting-up-kms.html["Configuración de AWS KMS"^].
 
-. Configure su almacenamiento:
+. *Configuración de almacenamiento*
 +
-.. Seleccione el rendimiento, la capacidad y la unidad. Es posible cambiar el valor de capacidad de almacenamiento y rendimiento en cualquier momento.
+.. Seleccione el rendimiento, la capacidad y la unidad. Es posible cambiar el rendimiento, la capacidad de almacenamiento y las IOPS en cualquier momento.
 .. Puede especificar un valor de IOPS de forma opcional. Si no especifica un valor de IOPS, BlueXP establecerá un valor predeterminado basado en 3 IOPS por GIB de la capacidad total introducida. Por ejemplo, si introduce 2000 GIB para la capacidad total y no hay valor para IOPS, el valor de IOPS efectivo se establecerá en 6000. Puede cambiar el valor de IOPS en cualquier momento.
 +
+image:screenshot-storage-config.png["Una captura de pantalla de cómo establecer la configuración de almacenamiento para FSX para ONTAP"]
 
-WARNING: Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá un error al añadir el entorno de trabajo.image:screenshot_fsx_working_environment_failed_iops.png["Captura de pantalla del mensaje de error si se establece un valor de IOPS incorrecto."]
++
 
-.. Haga clic en *Siguiente*.image:screenshot_add_fsx_storage_config.png["Una captura de pantalla de cómo establecer la configuración de almacenamiento para FSX para ONTAP"]
+NOTE: Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá un error al agregar el entorno de trabajo.
 
 
-. Revise la configuración:
+
+. *Revisión*
 +
 .. Haga clic en las pestañas para revisar las propiedades de ONTAP, las propiedades del proveedor y la configuración de red.
-.. Haga clic en *anterior* para realizar cambios en cualquier configuración.
-.. Haga clic en *Agregar* para aceptar la configuración y crear su entorno de trabajo.
-+
-image:screenshot_add_fsx_review.png["Captura de pantalla de revisión de la configuración de FSX para ONTAP"]
-
+.. Haga clic en *anterior* para realizar cambios en cualquier configuración o en *Agregar* para aceptar la configuración y crear su entorno de trabajo.
 
 
 
 
 .Resultado
-BlueXP muestra la configuración de su FSX para ONTAP en la página Canvas.
+BlueXP muestra la configuración de su FSX para ONTAP en el lienzo. Ahora puede añadir volúmenes a su entorno de trabajo FSX para ONTAP con BlueXP.
 
 image:screenshot_add_fsx_cloud.png["Captura de pantalla de Amazon FSX para ONTAP en la página entornos de trabajo."]
-
-Ahora puede añadir volúmenes a su entorno de trabajo FSX para ONTAP con BlueXP.
 
 
 
 == Descubra un FSX existente para el sistema de archivos ONTAP
 
-Si ha creado un sistema de archivos FSX para ONTAP mediante la Consola de administración de AWS o desea restaurar un entorno de trabajo que eliminó anteriormente, puede descubrirlo usando **Mis oportunidades** o manualmente.
-
-
-
-=== Descubra el uso de Mis oportunidades
-
 Si anteriormente ha proporcionado sus credenciales de AWS a BlueXP, *Mis oportunidades* puede descubrir y sugerir automáticamente FSX para sistemas de archivos ONTAP para agregar y gestionar con BlueXP. También puede revisar los servicios de datos disponibles.
+
+.Acerca de esta tarea
+Puede descubrir FSX para sistemas de archivos ONTAP mediante link:/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment["crear un nuevo entorno de trabajo"] O utilizando la página *Mis oportunidades*. En esta tarea se describe el descubrimiento mediante *Mis oportunidades*
 
 .Pasos
 . En BlueXP, haga clic en la ficha *Mis oportunidades*.
@@ -148,24 +120,7 @@ image:screenshot-opportunities.png["Una captura de pantalla de la página Mis op
 
 
 ====
-
-
-=== Detección manual
-
-Puede descubrir manualmente un sistema de archivos FSX para ONTAP agregado con la consola de gestión de AWS o que anteriormente eliminó de BlueXP.
-
-.Pasos
-. En BlueXP, haga clic en *Agregar entorno de trabajo*, seleccione *Servicios Web de Amazon*.
-. Seleccione *Amazon FSX para ONTAP* y haga clic en *haga clic aquí*.
-+
-image:screenshot_fsx_working_environment_discover.png["Captura de pantalla de cómo descubrir un entorno de trabajo para Amazon FSX para ONTAP"]
-
-. Seleccione las credenciales existentes o cree nuevas credenciales. Haga clic en *Siguiente*.
-. Seleccione la región de AWS y el entorno de trabajo que desea agregar.
-. Haga clic en *Agregar*.
-
-
 .Resultado
-BlueXP muestra el sistema de archivos FSX para ONTAP descubierto.
+BlueXP muestra el sistema de archivos FSX para ONTAP descubierto en el lienzo. Ahora puede añadir volúmenes a su entorno de trabajo FSX para ONTAP con BlueXP.
 
 image:screenshot_fsx_working_environment_select.png["Captura de pantalla de la selección de la región AWS y el entorno de trabajo"]
