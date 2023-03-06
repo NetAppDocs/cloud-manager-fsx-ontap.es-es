@@ -79,11 +79,17 @@
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-search.js'></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-pagenav.js'></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/es-es/cloud-manager-fsx-ontap/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/es-es/cloud-manager-fsx-ontap/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/na-utility.js'></script> -->
   <script src='/es-es/cloud-manager-fsx-ontap/js/clouddocs.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/toc.js'></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/customscripts.js'></script><script>
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/toc.js'></script> -->
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/customscripts.js'></script> --><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -148,7 +154,7 @@
   <script src='/es-es/cloud-manager-fsx-ontap/js/FileSaver.min.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jszip-utils.min.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jszip.min.js'></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/pdf-ux.js'></script>
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/pdf-ux.js'></script> -->
 </head>
 
 
@@ -221,7 +227,7 @@
           <span class="n-property-bar__menu-toggle-text">Menu</span>
           <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
             <title>bars</title>
-            <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#bars"></use>
+            <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#bars"></use>
           </svg>
         </a>
       </div>
@@ -230,11 +236,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
               <title>netapp-logo</title>
-              <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
         </a>
@@ -260,7 +266,7 @@
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#search"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#search"></use>
             </svg>
           </button>
         </div>
@@ -274,7 +280,7 @@
       <span class="lang-name">Español</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#globe"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
@@ -663,7 +669,7 @@
     <div class="ie-nmt-disclaimer-container">
       <div class="ie-nmt-disclaimer-icon">
         <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#circle-info">
+          <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#circle-info">
         </svg>
       </div>
       <div class="ie-nmt-disclaimer-content">
@@ -680,7 +686,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-20 16:35:54 +0000">02/20/2023</time>
+    <time datetime="2023-03-06 15:06:19 +0000">03/06/2023</time>
     
   
 
@@ -727,10 +733,10 @@ Si no especificó manualmente un valor de IOPS al crear el entorno de trabajo, B
 <div class="title">Pasos</div>
 <ol class="arabic">
 <li>
-<p>Abra el FSX para el entorno de trabajo de ONTAP.</p>
+<p>Seleccione el entorno de trabajo FSX para ONTAP en el lienzo.</p>
 </li>
 <li>
-<p>Seleccione el icono de menú (<span class="image"><img src="../media/icon-three-dots.png" alt="Imagen del icono de menú de tres puntos."></span>) Y seleccione <strong>gestionar capacidad automática</strong>.</p>
+<p>En el panel <strong>Detalles</strong>, utilice el icono de tres puntos (<span class="image"><img src="../media/icon-three-dots.png" alt="icono de tres puntos"></span>) para abrir el menú de opciones. Haga clic en <strong>gestionar capacidad automática</strong>.</p>
 <div class="paragraph">
 <p><span class="image"><img src="../media/screenshot-auto-capacity-no-connector.png" alt="Captura de pantalla del menú gestionar capacidad automática."></span></p>
 </div>
@@ -917,33 +923,6 @@ Si no especificó manualmente un valor de IOPS al crear el entorno de trabajo, B
 <div class="paragraph">
 <p>Puede eliminar el FSX para ONTAP de BlueXP.</p>
 </div>
-<div class="ulist">
-<div class="title">Antes de empezar</div>
-<ul>
-<li>
-<p>Debe <a href="task-manage-fsx-volumes.html#delete-volumes">"elimine todos los volúmenes"</a> asociado con el sistema de archivos.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-fsx-ontap/images/note.svg" alt="Nota">
-</td>
-<td class="content">
-Necesitará un conector activo en AWS para quitar o eliminar volúmenes.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>No se puede eliminar un entorno de trabajo que contenga volúmenes con errores. Los volúmenes con fallos deben eliminarse mediante la consola de gestión de AWS o la interfaz de línea de comandos antes de eliminar FSX para el sistema de archivos ONTAP.</p>
-</li>
-</ul>
-</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -955,6 +934,32 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<div class="title">Antes de empezar</div>
+<p>Antes de eliminar el entorno de trabajo, debe:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Rompa todas las relaciones de replicación con este entorno de trabajo.</p>
+</li>
+<li>
+<p><a href="task-manage-fsx-volumes.html#delete-volumes">"Elimine todos los volúmenes"</a> asociado con el sistema de archivos. Necesitará un conector activo en AWS para quitar o eliminar volúmenes.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-fsx-ontap/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+Los volúmenes con errores deben eliminarse mediante la consola de gestión de AWS o la interfaz de línea de comandos.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Pasos</div>
@@ -1025,7 +1030,7 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
                 <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                   <title>blog@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#blog"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#blog"></use>
                 </svg>
               </a>
             </li>
@@ -1036,7 +1041,7 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
                 <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
                   <title>community@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#comments"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#comments"></use>
                 </svg>
               </a>
             </li>
@@ -1047,7 +1052,7 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
                 <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                   <title>twitter@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#twitter"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
@@ -1058,7 +1063,7 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
                 <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
                   <title>facebook@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#facebook"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
@@ -1069,7 +1074,7 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
                 <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
                   <title>linkedin@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#linkedin"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -1080,7 +1085,7 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
                 <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                   <title>youtube@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#youtube"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -1091,7 +1096,7 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
                 <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
                   <title>slideshare@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#slideshare"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#slideshare"></use>
                 </svg>
               </a>
             </li>
@@ -1115,7 +1120,6 @@ Esta acción eliminará todos los recursos asociados con el entorno de trabajo. 
       cookieLaw.euCountry = "US";
       cookieLaw.invoke = function(){return false;}
     </script>
-    <script src='/es-es/cloud-manager-fsx-ontap/js/www-ntap.js'></script>
     <script src='/es-es/cloud-manager-fsx-ontap/js/tabbed-blocks.js'></script>
     <script src='/es-es/cloud-manager-fsx-ontap/js/sidebar.js'></script>
   </body></html>

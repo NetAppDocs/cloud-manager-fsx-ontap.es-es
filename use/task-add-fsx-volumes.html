@@ -79,11 +79,17 @@
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-search.js'></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-pagenav.js'></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/es-es/cloud-manager-fsx-ontap/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/es-es/cloud-manager-fsx-ontap/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/na-utility.js'></script> -->
   <script src='/es-es/cloud-manager-fsx-ontap/js/clouddocs.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/toc.js'></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/customscripts.js'></script><script>
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/toc.js'></script> -->
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/customscripts.js'></script> --><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -148,7 +154,7 @@
   <script src='/es-es/cloud-manager-fsx-ontap/js/FileSaver.min.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jszip-utils.min.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jszip.min.js'></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/pdf-ux.js'></script>
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/pdf-ux.js'></script> -->
 </head>
 
 
@@ -221,7 +227,7 @@
           <span class="n-property-bar__menu-toggle-text">Menu</span>
           <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
             <title>bars</title>
-            <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#bars"></use>
+            <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#bars"></use>
           </svg>
         </a>
       </div>
@@ -230,11 +236,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
               <title>netapp-logo</title>
-              <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
         </a>
@@ -260,7 +266,7 @@
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#search"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#search"></use>
             </svg>
           </button>
         </div>
@@ -274,7 +280,7 @@
       <span class="lang-name">Español</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#globe"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
@@ -663,7 +669,7 @@
     <div class="ie-nmt-disclaimer-container">
       <div class="ie-nmt-disclaimer-icon">
         <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#circle-info">
+          <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#circle-info">
         </svg>
       </div>
       <div class="ie-nmt-disclaimer-content">
@@ -680,7 +686,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-20 16:35:54 +0000">02/20/2023</time>
+    <time datetime="2023-03-06 15:06:19 +0000">03/06/2023</time>
     
   
 
@@ -703,11 +709,8 @@
 <div class="paragraph">
 <p>Puede crear y gestionar volúmenes NFS, CIFS e iSCSI desde su entorno de trabajo FSX para ONTAP en BlueXP. Los volúmenes creados con la CLI de ONTAP también serán visibles en el entorno de trabajo FSX para ONTAP.</p>
 </div>
-<div class="paragraph">
-<div class="title">Antes de empezar</div>
-<p>Necesita:</p>
-</div>
 <div class="ulist">
+<div class="title">Lo que necesitará</div>
 <ul>
 <li>
 <p>Un activo <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html" target="_blank" rel="noopener">"Conector en AWS"</a>.</p>
@@ -717,29 +720,24 @@
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<div class="title">Acerca de esta tarea</div>
+<p>Puede añadir volúmenes abriendo el entorno de trabajo y seleccionando la ficha <strong>volúmenes</strong> o simplemente utilizando el panel entorno de trabajo <strong>Detalles</strong> del lienzo. En esta tarea se describe cómo agregar volúmenes mediante el panel <strong>Detalles</strong>.</p>
+</div>
 <div class="olist arabic">
 <div class="title">Pasos</div>
 <ol class="arabic">
 <li>
-<p>Abra el FSX para el entorno de trabajo de ONTAP.</p>
+<p>Seleccione el entorno de trabajo FSX para ONTAP en el lienzo. Si no tiene un conector activado, se le pedirá que agregue uno.</p>
 </li>
 <li>
-<p>Si no tiene un conector activado, se le pedirá que agregue uno.</p>
+<p>En el panel <strong>Detalles</strong>, utilice los tres puntos (<span class="image"><img src="../media/icon-three-dots.png" alt="icono de tres puntos"></span>) para abrir el menú de opciones. Haga clic en <strong>Añadir volumen</strong>.</p>
 <div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_fsx_connector_prompt.png" alt="Una captura de pantalla de la solicitud del conector FSX para ONTAP."></span></p>
+<p><span class="image"><img src="../media/screenshot-add-volume.png" alt="Captura de pantalla de la opción Add volume del panel Detalles."></span></p>
 </div>
 </li>
 <li>
-<p>Haga clic en la ficha <strong>Volumes</strong></p>
-</li>
-<li>
-<p>Haga clic en <strong>Añadir volumen</strong>.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_fsx_volume_new.png" alt="Captura de pantalla de la ficha volumen FSX para ONTAP."></span></p>
-</div>
-</li>
-<li>
-<p><strong>Detalles del volumen y Protección</strong>:</p>
+<p><strong>Detalles del volumen y Protección</strong></p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -754,23 +752,22 @@
 <li>
 <p>Seleccione una política de Snapshot. De forma predeterminada, se realiza una copia de Snapshot cada hora (manteniendo las últimas seis copias), cada día (manteniendo las dos últimas copias) y cada semana (manteniendo las dos últimas copias).</p>
 </li>
-<li>
-<p>Haga clic en <strong>Siguiente</strong>.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_fsx_volume_details.png" alt="Una captura de pantalla de los campos de protección y detalles del volumen para FSX para la creación de volúmenes de ONTAP."></span></p>
-</div>
-</li>
 </ol>
 </div>
 </li>
 <li>
-<p><strong>Protocolo</strong>: Seleccione un protocolo de volumen NFS, CIFS o iSCSI.</p>
+<p><strong>Protocolo de volúmenes</strong>:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Para NFS:</p>
-<div class="ulist">
-<ul>
+<p>Seleccione un protocolo de volumen NFS, CIFS o iSCSI.</p>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">NFS</div>
+<div class="content">
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
 <li>
 <p>Seleccione una política de control de acceso.</p>
 </li>
@@ -783,13 +780,15 @@
 <p><span class="image"><img src="../media/screenshot_fsx_volume_protocol_nfs.png" alt="Una captura de pantalla de la configuración de NFS FSX para la creación del volumen ONTAP."></span></p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
-</li>
-<li>
-<p>Para CIFS:</p>
-<div class="ulist">
-<ul>
+</div>
+</div>
+<div class="openblock">
+<div class="title">CIFS</div>
+<div class="content">
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
 <li>
 <p>Introduzca un nombre para compartir.</p>
 </li>
@@ -802,22 +801,13 @@
 <p><span class="image"><img src="../media/screenshot_fsx_volume_protocol_cifs.png" alt="Una captura de pantalla de la configuración de NFS FSX para la creación del volumen ONTAP."></span></p>
 </div>
 </li>
-</ul>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-fsx-ontap/images/tip.svg" alt="Sugerencia">
-</td>
-<td class="content">
-Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que configure la conectividad CIFS mediante una configuración <em>Active Directory</em> o <em>Workgroup</em>.
-</td>
-</tr>
-</table>
-</div>
+<li>
+<p>Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que configure la conectividad CIFS mediante una configuración <em>Active Directory</em> o <em>Workgroup</em>.</p>
 <div class="ulist">
 <ul>
+<li>
+<p>Si selecciona una configuración de grupo de trabajo, introduzca el servidor y el nombre del grupo de trabajo para un grupo de trabajo configurado para CIFS.</p>
+</li>
 <li>
 <p>Si selecciona una configuración de Active Directory, tendrá que proporcionar la siguiente información de configuración.</p>
 <table class="tableblock frame-all grid-all stretch">
@@ -863,14 +853,19 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
 </tbody>
 </table>
 </li>
-<li>
-<p>Si selecciona una configuración de grupo de trabajo, introduzca el servidor y el nombre del grupo de trabajo para un grupo de trabajo configurado para CIFS.</p>
-</li>
 </ul>
 </div>
 </li>
-<li>
-<p>Para iSCSI: Puede conectar el LUN con un iGroup existente o crear uno nuevo. Para asignar un iGroup existente, seleccione su sistema operativo y uno o más iGroups.</p>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ISCSI</div>
+<div class="content">
+<div class="paragraph">
+<p>Puede conectar su LUN mediante un iGroup existente o crear uno nuevo. Para asignar un iGroup existente, seleccione su sistema operativo y uno o más iGroups.</p>
+</div>
 <div class="paragraph">
 <p>Para crear un nuevo iGroup:</p>
 </div>
@@ -893,15 +888,16 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
 </li>
 </ol>
 </div>
-</li>
-<li>
-<p>Haga clic en <strong>Siguiente</strong>.</p>
+</div>
+</div>
+</div>
+</div>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p><strong>Perfil de uso y clasificación</strong>:</p>
+<p><strong>Perfil de uso y clasificación por niveles</strong></p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -909,9 +905,6 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
 </li>
 <li>
 <p>De forma predeterminada, <strong>la directiva de segmentación</strong> se establece en <strong>sólo instantánea</strong>. Puede seleccionar una política de organización en niveles diferente en función de sus necesidades.</p>
-</li>
-<li>
-<p>Haga clic en <strong>Siguiente</strong>.</p>
 <div class="paragraph">
 <p><span class="image"><img src="../media/screenshot_fsx_volume_usage_tiering.png" alt="Una captura de pantalla del perfil de uso y la configuración de niveles para FSX para la creación de volúmenes de ONTAP."></span></p>
 </div>
@@ -920,7 +913,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
 </div>
 </li>
 <li>
-<p><strong>Revisión</strong>: Revise su configuración de volumen. Haga clic en <strong>anterior</strong> para cambiar la configuración o haga clic en <strong>Agregar</strong> para crear el volumen.</p>
+<p><strong>Revisión</strong>: Revise su configuración de volumen. Haga clic en <strong>anterior</strong> para cambiar la configuración o en <strong>Agregar</strong> para crear el volumen.</p>
 </li>
 </ol>
 </div>
@@ -936,20 +929,27 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
 <div class="paragraph">
 <p>Acceda a las instrucciones de montaje desde BlueXP para que pueda montar el volumen en un host.</p>
 </div>
+<div class="paragraph">
+<div class="title">Acerca de esta tarea</div>
+<p>Puede montar volúmenes abriendo el entorno de trabajo y seleccionando la ficha <strong>volúmenes</strong> o simplemente utilizando el panel entorno de trabajo <strong>Detalles</strong> del lienzo. En esta tarea se describe cómo agregar volúmenes mediante el panel <strong>Detalles</strong>.</p>
+</div>
 <div class="olist arabic">
 <div class="title">Pasos</div>
 <ol class="arabic">
 <li>
-<p>Abra el entorno de trabajo.</p>
+<p>Seleccione el entorno de trabajo FSX para ONTAP en el lienzo.</p>
 </li>
 <li>
-<p>Seleccione la ficha <strong>volumen</strong> y <strong>Administrar volumen</strong> para abrir el menú <strong>acciones de volumen</strong>.</p>
+<p>En el panel <strong>Detalles</strong>, utilice el icono de tres puntos (<span class="image"><img src="../media/icon-three-dots.png" alt="icono de tres puntos"></span>) para abrir el menú de opciones. Haga clic en <strong>Ver volúmenes</strong>.</p>
 <div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_fsx_volume_actions.png" alt="Una captura de pantalla de cómo abrir el menú Volume Actions (acciones de volumen)."></span></p>
+<p><span class="image"><img src="../media/screenshot-view-volume.png" alt="Una captura de pantalla de cómo abrir el menú Volume Actions (acciones de volumen)."></span></p>
 </div>
 </li>
 <li>
-<p>Seleccione <strong>Mount command</strong> y siga las instrucciones para montar el volumen.</p>
+<p>Utilice <strong>Administrar volúmenes</strong> para abrir el menú <strong>acciones de volumen</strong>. Haga clic en <strong>comando de montaje</strong> y siga las instrucciones para montar el volumen.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/screenshot-mount-volume.png" alt="Captura de pantalla del comando Mount volume."></span></p>
+</div>
 </li>
 </ol>
 </div>
@@ -1009,7 +1009,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
                 <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                   <title>blog@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#blog"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#blog"></use>
                 </svg>
               </a>
             </li>
@@ -1020,7 +1020,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
                 <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
                   <title>community@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#comments"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#comments"></use>
                 </svg>
               </a>
             </li>
@@ -1031,7 +1031,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
                 <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                   <title>twitter@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#twitter"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
@@ -1042,7 +1042,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
                 <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
                   <title>facebook@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#facebook"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
@@ -1053,7 +1053,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
                 <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
                   <title>linkedin@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#linkedin"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -1064,7 +1064,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
                 <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                   <title>youtube@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#youtube"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -1075,7 +1075,7 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
                 <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
                   <title>slideshare@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#slideshare"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#slideshare"></use>
                 </svg>
               </a>
             </li>
@@ -1099,7 +1099,6 @@ Si este es el primer volumen CIFS de este entorno de trabajo, se le pedirá que 
       cookieLaw.euCountry = "US";
       cookieLaw.invoke = function(){return false;}
     </script>
-    <script src='/es-es/cloud-manager-fsx-ontap/js/www-ntap.js'></script>
     <script src='/es-es/cloud-manager-fsx-ontap/js/tabbed-blocks.js'></script>
     <script src='/es-es/cloud-manager-fsx-ontap/js/sidebar.js'></script>
   </body></html>

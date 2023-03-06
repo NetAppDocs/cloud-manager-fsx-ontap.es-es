@@ -79,11 +79,17 @@
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-search.js'></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-pagenav.js'></script><script src='/es-es/cloud-manager-fsx-ontap/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/es-es/cloud-manager-fsx-ontap/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/es-es/cloud-manager-fsx-ontap/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/na-utility.js'></script> -->
   <script src='/es-es/cloud-manager-fsx-ontap/js/clouddocs.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/toc.js'></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/customscripts.js'></script><script>
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/toc.js'></script> -->
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/customscripts.js'></script> --><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -148,7 +154,7 @@
   <script src='/es-es/cloud-manager-fsx-ontap/js/FileSaver.min.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jszip-utils.min.js'></script>
   <script src='/es-es/cloud-manager-fsx-ontap/js/jszip.min.js'></script>
-  <script src='/es-es/cloud-manager-fsx-ontap/js/pdf-ux.js'></script>
+  <!-- <script src='/es-es/cloud-manager-fsx-ontap/js/pdf-ux.js'></script> -->
 </head>
 
 
@@ -221,7 +227,7 @@
           <span class="n-property-bar__menu-toggle-text">Menu</span>
           <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
             <title>bars</title>
-            <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#bars"></use>
+            <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#bars"></use>
           </svg>
         </a>
       </div>
@@ -230,11 +236,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
               <title>netapp-logo</title>
-              <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
         </a>
@@ -260,7 +266,7 @@
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#search"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#search"></use>
             </svg>
           </button>
         </div>
@@ -274,7 +280,7 @@
       <span class="lang-name">Español</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#globe"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
@@ -663,7 +669,7 @@
     <div class="ie-nmt-disclaimer-container">
       <div class="ie-nmt-disclaimer-icon">
         <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#circle-info">
+          <use xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#circle-info">
         </svg>
       </div>
       <div class="ie-nmt-disclaimer-content">
@@ -680,7 +686,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-20 16:35:54 +0000">02/20/2023</time>
+    <time datetime="2023-03-06 15:06:19 +0000">03/06/2023</time>
     
   
 
@@ -704,7 +710,7 @@
 <p>El primer paso es crear un entorno de trabajo FSX para ONTAP. Si ya ha creado un FSX para el sistema de archivos ONTAP en la consola de gestión de AWS, puede <a href="task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system">"Descúbralo mediante BlueXP"</a>.</p>
 </div>
 <div class="paragraph">
-<div class="title">Antes de empezar</div>
+<div class="title">Lo que necesitará</div>
 <p>Antes de crear su entorno de trabajo FSX para ONTAP en BlueXP, necesitará:</p>
 </div>
 <div class="ulist">
@@ -721,35 +727,26 @@
 <div class="title">Pasos</div>
 <ol class="arabic">
 <li>
-<p>En BlueXP, agregue un nuevo entorno de trabajo, seleccione la ubicación <strong>Amazon Web Services</strong> y haga clic en <strong>Siguiente</strong>.</p>
-</li>
-<li>
-<p>Seleccione <strong>Amazon FSX para ONTAP</strong> y haga clic en <strong>Siguiente</strong>.</p>
+<p>En BlueXP, agregue un nuevo entorno de trabajo, seleccione <strong>Servicios Web de Amazon</strong> y haga clic en <strong>Añadir nuevo</strong> para Amazon FSX para ONTAP.</p>
 <div class="paragraph">
 <p><span class="image"><img src="../media/screenshot_add_fsx_working_env.png" alt="Captura de pantalla de la adición de un entorno de trabajo para Amazon FSX para ONTAP"></span></p>
 </div>
 </li>
 <li>
-<p>Autenticar FSX para ONTAP en BlueXP.</p>
+<p><strong>FSX para la autenticación ONTAP</strong></p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>Si ya tiene una función IAM en su cuenta con los permisos de AWS correctos para FSX para ONTAP, selecciónela en el menú desplegable.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot-fsx-assume-role-present.png" alt="Captura de pantalla que muestra la lista desplegable de funciones de AWS"></span></p>
-</div>
 </li>
 <li>
-<p>Si no tiene ningún rol de IAM en su cuenta, haga clic en <strong>Página de credenciales</strong> y siga los pasos del asistente para agregar un ARN para un rol de AWS IAM con credenciales de FSX para ONTAP. Consulte <a href="../requirements/task-setting-up-permissions-fsx.html">"Adición de credenciales de AWS a BlueXP"</a> para obtener más detalles.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot-fsx-assume-role-not-present.png" alt="Una captura de pantalla de los pasos para añadir el ARN para una función de IAM de AWS con permiso FSX para ONTAP."></span></p>
-</div>
+<p>Si no tiene ningún rol de IAM en su cuenta, haga clic en <strong>credenciales</strong> y siga los pasos del asistente para agregar un ARN para un rol de AWS IAM con credenciales de FSX para ONTAP. Consulte <a href="../requirements/task-setting-up-permissions-fsx.html">"Adición de credenciales de AWS a BlueXP"</a> para obtener más detalles.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Proporcione información acerca de la instancia del FSX para ONTAP:</p>
+<p><strong>Detalles y credenciales</strong></p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -762,29 +759,60 @@
 <p>Introduzca y confirme la contraseña del clúster de ONTAP que desea utilizar.</p>
 </li>
 <li>
-<p>Seleccione la opción para usar la misma contraseña para el usuario de SVM o establecer una contraseña diferente.</p>
-</li>
-<li>
-<p>Haga clic en <strong>Siguiente</strong>.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_add_fsx_credentials.png" alt="Captura de pantalla de agregar credenciales para FSX para ONTAP"></span></p>
-</div>
+<p>De manera opcional, anule la selección de la opción para usar la misma contraseña para el usuario de SVM y establecer una contraseña diferente.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Proporcionar información de región y VPC:</p>
+<p><strong>Región y VPC</strong></p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Seleccione un modelo de despliegue de alta disponibilidad <strong>Zona de disponibilidad única</strong> o <strong>zonas de disponibilidad múltiple</strong>.</p>
+<p>Seleccione un modelo de despliegue de alta disponibilidad <strong>Zona de disponibilidad única</strong> o <strong>zonas de disponibilidad múltiple</strong>. En el caso de varias zonas de disponibilidad, seleccione subredes en al menos dos zonas de disponibilidad, de manera que cada nodo esté en una zona de disponibilidad dedicada.</p>
 <div class="paragraph">
-<p><span class="image"><img src="../media/screenshot-ha-deployment-models.png" alt="Una captura de pantalla de los botones de opción de selección para modelos de despliegue de una o varias zonas de disponibilidad."></span></p>
+<p><span class="image"><img src="../media/screenshot_add_fsx_region.png" alt="Una captura de pantalla de cómo agregar una región y VPC para FSX para ONTAP"></span></p>
 </div>
 </li>
 <li>
-<p>Seleccione una región y VPC.</p>
+<p>Acepte el grupo de seguridad predeterminado o seleccione uno diferente. <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html" target="_blank" rel="noopener">"Grupos de seguridad de AWS"</a> controlar el tráfico entrante y saliente. Los configura el administrador de AWS y están asociados con su <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html" target="_blank" rel="noopener">"Interfaz de red elástica de AWS (ENI)"</a>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>IP flotante</strong> (sólo zonas de disponibilidad múltiple)</p>
+<div class="paragraph">
+<p>Deje <em>CIDR Range</em> vacío para establecer automáticamente un rango disponible. Opcionalmente, puede utilizar <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html" target="_blank" rel="noopener">"Puerta de enlace de tránsito de AWS"</a> para configurar manualmente un rango.</p>
+</div>
+</li>
+<li>
+<p>* Tablas de rutas* (sólo zonas de disponibilidad múltiple)</p>
+<div class="paragraph">
+<p>Seleccione tablas de rutas que incluyan rutas a las direcciones IP flotantes. Si sólo tiene una tabla de rutas para las subredes en el VPC (la tabla de rutas principal), BlueXP agrega automáticamente las direcciones IP flotantes a esa tabla de rutas.</p>
+</div>
+</li>
+<li>
+<p><strong>Cifrado de datos</strong></p>
+<div class="paragraph">
+<p>Acepte la clave maestra predeterminada de AWS o haga clic en <strong>Cambiar clave</strong> para seleccionar una clave maestra de cliente de AWS (CMK) diferente. Para obtener más información sobre CMK, consulte <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/https://docs.netapp.com/us-en/occm/task-setting-up-kms.html" target="_blank" rel="noopener">"Configuración de AWS KMS"</a>.</p>
+</div>
+</li>
+<li>
+<p><strong>Configuración de almacenamiento</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Seleccione el rendimiento, la capacidad y la unidad. Es posible cambiar el rendimiento, la capacidad de almacenamiento y las IOPS en cualquier momento.</p>
+</li>
+<li>
+<p>Puede especificar un valor de IOPS de forma opcional. Si no especifica un valor de IOPS, BlueXP establecerá un valor predeterminado basado en 3 IOPS por GIB de la capacidad total introducida. Por ejemplo, si introduce 2000 GIB para la capacidad total y no hay valor para IOPS, el valor de IOPS efectivo se establecerá en 6000. Puede cambiar el valor de IOPS en cualquier momento.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/screenshot-storage-config.png" alt="Una captura de pantalla de cómo establecer la configuración de almacenamiento para FSX para ONTAP"></span></p>
+</div>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -792,87 +820,21 @@
 <img src="/us-en/cloud-manager-fsx-ontap/images/note.svg" alt="Nota">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>En el caso de varias zonas de disponibilidad, seleccione subredes en al menos dos zonas de disponibilidad, de manera que cada nodo esté en una zona de disponibilidad dedicada.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_add_fsx_region.png" alt="Una captura de pantalla de cómo agregar una región y VPC para FSX para ONTAP"></span></p>
-</div>
+Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá un error al agregar el entorno de trabajo.
 </td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>Acepte el grupo de seguridad predeterminado o seleccione uno diferente. <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html" target="_blank" rel="noopener">"Grupos de seguridad de AWS"</a> controlar el tráfico entrante y saliente. Los configura el administrador de AWS y están asociados con su <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html" target="_blank" rel="noopener">"Interfaz de red elástica de AWS (ENI)"</a>.</p>
-</li>
-<li>
-<p>Haga clic en <strong>Siguiente</strong>.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Deje <em>CIDR Range</em> vacío y haga clic en <strong>Siguiente</strong> para configurar automáticamente un rango disponible. Opcionalmente, puede utilizar <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html" target="_blank" rel="noopener">"Puerta de enlace de tránsito de AWS"</a> para configurar manualmente un rango.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_add_fsx_floatingIP.png" alt="Una captura de pantalla de cómo agregar una región y VPC para FSX para ONTAP"></span></p>
-</div>
-</li>
-<li>
-<p>Seleccione tablas de rutas que incluyan rutas a las direcciones IP flotantes. Si sólo tiene una tabla de rutas para las subredes en el VPC (la tabla de rutas principal), BlueXP agrega automáticamente las direcciones IP flotantes a esa tabla de rutas. Haga clic en <strong>Siguiente</strong> para continuar.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_add_fsx_route_table.png" alt="Captura de pantalla de selección de una tabla de ruta para FSX para ONTAP"></span></p>
-</div>
-</li>
-<li>
-<p>Acepte la clave maestra predeterminada de AWS o haga clic en <strong>Cambiar clave</strong> para seleccionar una clave maestra de cliente de AWS (CMK) diferente. Para obtener más información sobre CMK, consulte <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/https://docs.netapp.com/us-en/occm/task-setting-up-kms.html" target="_blank" rel="noopener">"Configuración de AWS KMS"</a>. Haga clic en <strong>Siguiente</strong> para continuar.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_add_fsx_encryption.png" alt="Captura de pantalla de configuración de la clave maestra predeterminada para FSX para ONTAP"></span></p>
-</div>
-</li>
-<li>
-<p>Configure su almacenamiento:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Seleccione el rendimiento, la capacidad y la unidad. Es posible cambiar el valor de capacidad de almacenamiento y rendimiento en cualquier momento.</p>
-</li>
-<li>
-<p>Puede especificar un valor de IOPS de forma opcional. Si no especifica un valor de IOPS, BlueXP establecerá un valor predeterminado basado en 3 IOPS por GIB de la capacidad total introducida. Por ejemplo, si introduce 2000 GIB para la capacidad total y no hay valor para IOPS, el valor de IOPS efectivo se establecerá en 6000. Puede cambiar el valor de IOPS en cualquier momento.</p>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-fsx-ontap/images/warning.svg" alt="Aviso">
-</td>
-<td class="content">
-Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá un error al añadir el entorno de trabajo.<span class="image"><img src="../media/screenshot_fsx_working_environment_failed_iops.png" alt="Captura de pantalla del mensaje de error si se establece un valor de IOPS incorrecto."></span>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Haga clic en <strong>Siguiente</strong>.<span class="image"><img src="../media/screenshot_add_fsx_storage_config.png" alt="Una captura de pantalla de cómo establecer la configuración de almacenamiento para FSX para ONTAP"></span></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Revise la configuración:</p>
+<p><strong>Revisión</strong></p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>Haga clic en las pestañas para revisar las propiedades de ONTAP, las propiedades del proveedor y la configuración de red.</p>
 </li>
 <li>
-<p>Haga clic en <strong>anterior</strong> para realizar cambios en cualquier configuración.</p>
-</li>
-<li>
-<p>Haga clic en <strong>Agregar</strong> para aceptar la configuración y crear su entorno de trabajo.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_add_fsx_review.png" alt="Captura de pantalla de revisión de la configuración de FSX para ONTAP"></span></p>
-</div>
+<p>Haga clic en <strong>anterior</strong> para realizar cambios en cualquier configuración o en <strong>Agregar</strong> para aceptar la configuración y crear su entorno de trabajo.</p>
 </li>
 </ol>
 </div>
@@ -881,13 +843,10 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
 </div>
 <div class="paragraph">
 <div class="title">Resultado</div>
-<p>BlueXP muestra la configuración de su FSX para ONTAP en la página Canvas.</p>
+<p>BlueXP muestra la configuración de su FSX para ONTAP en el lienzo. Ahora puede añadir volúmenes a su entorno de trabajo FSX para ONTAP con BlueXP.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../media/screenshot_add_fsx_cloud.png" alt="Captura de pantalla de Amazon FSX para ONTAP en la página entornos de trabajo."></span></p>
-</div>
-<div class="paragraph">
-<p>Ahora puede añadir volúmenes a su entorno de trabajo FSX para ONTAP con BlueXP.</p>
 </div>
 </div>
 </div>
@@ -895,12 +854,11 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
 <h2 id="descubra-un-fsx-existente-para-el-sistema-de-archivos-ontap">Descubra un FSX existente para el sistema de archivos ONTAP</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Si ha creado un sistema de archivos FSX para ONTAP mediante la Consola de administración de AWS o desea restaurar un entorno de trabajo que eliminó anteriormente, puede descubrirlo usando <strong>Mis oportunidades</strong> o manualmente.</p>
-</div>
-<div class="sect2">
-<h3 id="descubra-el-uso-de-mis-oportunidades">Descubra el uso de Mis oportunidades</h3>
-<div class="paragraph">
 <p>Si anteriormente ha proporcionado sus credenciales de AWS a BlueXP, <strong>Mis oportunidades</strong> puede descubrir y sugerir automáticamente FSX para sistemas de archivos ONTAP para agregar y gestionar con BlueXP. También puede revisar los servicios de datos disponibles.</p>
+</div>
+<div class="paragraph">
+<div class="title">Acerca de esta tarea</div>
+<p>Puede descubrir FSX para sistemas de archivos ONTAP mediante <a href="/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment">"crear un nuevo entorno de trabajo"</a> O utilizando la página <strong>Mis oportunidades</strong>. En esta tarea se describe el descubrimiento mediante <strong>Mis oportunidades</strong></p>
 </div>
 <div class="olist arabic">
 <div class="title">Pasos</div>
@@ -940,42 +898,12 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2">
-<h3 id="detección-manual">Detección manual</h3>
-<div class="paragraph">
-<p>Puede descubrir manualmente un sistema de archivos FSX para ONTAP agregado con la consola de gestión de AWS o que anteriormente eliminó de BlueXP.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Pasos</div>
-<ol class="arabic">
-<li>
-<p>En BlueXP, haga clic en <strong>Agregar entorno de trabajo</strong>, seleccione <strong>Servicios Web de Amazon</strong>.</p>
-</li>
-<li>
-<p>Seleccione <strong>Amazon FSX para ONTAP</strong> y haga clic en <strong>haga clic aquí</strong>.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../media/screenshot_fsx_working_environment_discover.png" alt="Captura de pantalla de cómo descubrir un entorno de trabajo para Amazon FSX para ONTAP"></span></p>
-</div>
-</li>
-<li>
-<p>Seleccione las credenciales existentes o cree nuevas credenciales. Haga clic en <strong>Siguiente</strong>.</p>
-</li>
-<li>
-<p>Seleccione la región de AWS y el entorno de trabajo que desea agregar.</p>
-</li>
-<li>
-<p>Haga clic en <strong>Agregar</strong>.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <div class="title">Resultado</div>
-<p>BlueXP muestra el sistema de archivos FSX para ONTAP descubierto.</p>
+<p>BlueXP muestra el sistema de archivos FSX para ONTAP descubierto en el lienzo. Ahora puede añadir volúmenes a su entorno de trabajo FSX para ONTAP con BlueXP.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../media/screenshot_fsx_working_environment_select.png" alt="Captura de pantalla de la selección de la región AWS y el entorno de trabajo"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -1029,7 +957,7 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
                 <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                   <title>blog@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#blog"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#blog"></use>
                 </svg>
               </a>
             </li>
@@ -1040,7 +968,7 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
                 <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
                   <title>community@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#comments"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#comments"></use>
                 </svg>
               </a>
             </li>
@@ -1051,7 +979,7 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
                 <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                   <title>twitter@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#twitter"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
@@ -1062,7 +990,7 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
                 <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
                   <title>facebook@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#facebook"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
@@ -1073,7 +1001,7 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
                 <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
                   <title>linkedin@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#linkedin"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -1084,7 +1012,7 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
                 <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                   <title>youtube@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#youtube"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -1095,7 +1023,7 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
                 <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
                   <title>slideshare@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/cloud-manager-fsx-ontap/common/svg/sprite.svg#slideshare"></use>
+                    xlink:href="/es-es/cloud-manager-fsx-ontap/images/sprite.svg#slideshare"></use>
                 </svg>
               </a>
             </li>
@@ -1119,7 +1047,6 @@ Si especifica un valor de IOPS que no cumple los requisitos mínimos, recibirá 
       cookieLaw.euCountry = "US";
       cookieLaw.invoke = function(){return false;}
     </script>
-    <script src='/es-es/cloud-manager-fsx-ontap/js/www-ntap.js'></script>
     <script src='/es-es/cloud-manager-fsx-ontap/js/tabbed-blocks.js'></script>
     <script src='/es-es/cloud-manager-fsx-ontap/js/sidebar.js'></script>
   </body></html>
